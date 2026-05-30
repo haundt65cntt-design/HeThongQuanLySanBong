@@ -1,27 +1,23 @@
-# Hệ Thống Quản Lý Sân Bóng
+# Hệ Thống Quản Lý Sân Bóng 
 
- 
-Hiện tại ứng dụng đã hoàn thành cấu trúc khung sườn cơ bản, thiết kế giao diện và giả lập dữ liệu thành công.
+Em đã sửa lại giao diện màn hình chính và viết thêm logic code để chuyển hẳn ứng dụng sang luồng chức năng dành cho Khách hàng vào xem và đặt lịch, thay vì làm giao diện cho Admin quản lý như tuần trước.
 
-## Tiến độ hiện tại:
-* Hoàn thành giao diện Màn hình đăng nhập (chạy thử với tài khoản admin/admin).
-* Hoàn thành giao diện Màn hình chính hiển thị danh sách các sân cỏ nhân tạo NTU bằng ListView.
+## Các phần em đã chỉnh sửa và hoàn thành:
+- Dọn dẹp giao diện: Xóa bỏ các nút bấm của Admin như "Thêm sân mới" hay "Góc quản lý nhanh" để màn hình gọn gàng, đúng thực tế với app cho người đi thuê sân.
+- Sắp xếp lại bố cục: Chia lại tỷ lệ 3 ô danh mục (Sân 5, Sân 7, Sân 11) ở đầu trang bằng layout_weight để các ô tự động dàn đều, nhìn cân đối và không bị thừa khoảng trắng.
+- Bổ sung dữ liệu: Tự nhập thủ công danh sách 10 sân bóng vào ArrayList với đầy đủ tên sân và trạng thái khác nhau (Còn trống / Đã đặt) để hiển thị lên ListView.
+- Thêm thanh trạng thái: Thiết kế thêm 2 ô nhỏ ở dưới cùng màn hình để hiển thị tổng số sân đang trống và số sân đã được đặt trong ngày.
+- Viết sự kiện Click: Thiết lập khi người dùng bấm vào một sân bất kỳ trong danh sách, ứng dụng sẽ hiện lên một cái AlertDialog (hộp thoại lựa chọn) cơ bản gồm các nút: Đặt Sân & Cọc, Hủy Sân hoặc Liên Hệ Hotline.
+- Xử lý thay đổi dữ liệu: Khi khách bấm Đặt hoặc Hủy trên hộp thoại, chữ trạng thái trên dòng đó sẽ tự thay đổi và 2 ô đếm số lượng sân trống phía dưới cũng tự động nhảy lại số chính xác.
 
-## Hình ảnh kết quả chạy trên máy ảo:
-<img width="373" height="786" alt="Screenshot 2026-05-25 232235" src="https://github.com/user-attachments/assets/0a0f7553-fc62-489e-9d92-0de76f0d70cd" />
-<img width="381" height="782" alt="Screenshot 2026-05-30 121643" src="https://github.com/user-attachments/assets/980ec0ac-85bb-4ace-8dad-a9b578de3f02" />
+## Hình ảnh chạy thực tế trên máy ảo:
+<p align="center">
+  <img width="373" height="786" alt="Màn hình đăng nhập" src="https://github.com/user-attachments/assets/0a0f7553-fc62-489e-9d92-0de76f0d70cd" />
+  <img width="381" height="782" alt="Màn hình danh sách đặt sân online" src="https://github.com/user-attachments/assets/980ec0ac-85bb-4ace-8dad-a9b578de3f02" />
+  <img width="387" height="795" alt="Hộp thoại chọn chức năng sân" src="https://github.com/user-attachments/assets/fde9c7da-3c45-4c41-b742-26b09996c3ee" />
+</p>
 
-Hiện tại ứng dụng đã được tinh chỉnh cấu trúc, chuyển đổi hoàn toàn sang luồng chức năng dành cho khách hàng đặt sân để phù hợp với thực tế và nâng cấp giao diện cân đối hơn.
-
-## Tiến độ cập nhật (Lần 2):
-* **Tối ưu hóa đối tượng sử dụng:** Loại bỏ các nút bấm và tính năng thuộc quyền Admin (thêm sân mới, quản lý nhanh) để tập trung 100% vào trải nghiệm của Khách hàng thuê sân.
-* **Nâng cấp bố cục giao diện:**
-  * Sử dụng thuộc tính `layout_weight` giúp chia đều tỉ lệ các danh mục Sân 5, Sân 7, Sân 11 giúp màn hình hiển thị cân đối tuyệt đối, không bị lỗi tràn viền hay khoảng trắng dư thừa.
-  * Bổ sung thanh hiển thị **Trạng Thái Sân Hôm Nay** (Sân đang trống / Sân đã đặt) trực quan ở phía dưới cùng màn hình giúp người dùng nắm bắt thông tin nhanh.
-* **Mở rộng dữ liệu:** Tự nhập thủ công danh sách đầy đủ 10 sân bóng thực tế với trạng thái giả lập khác nhau để kiểm thử giao diện.
-* **Xử lý sự kiện nâng cao:**
-  * Viết code bắt sự kiện khi click vào từng sân trong `ListView`.
-  * Sử dụng `AlertDialog` cơ bản để hiển thị hộp thoại chức năng: cho phép khách hàng nhấn **Đặt Sân & Cọc**, **Hủy Sân** (tự động cập nhật lại số lượng trạng thái hiển thị real-time trên màn hình chính) hoặc bấm **Liên Hệ Chủ Sân** qua hotline.
-
-## Hình ảnh kết quả Quản lý sân chạy trên máy ảo:
-<img width="387" height="795" alt="Screenshot 2026-05-30 121618" src="https://github.com/user-attachments/assets/fde9c7da-3c45-4c41-b742-26b09996c3ee" />
+## Cấu trúc mã nguồn thực hiện:
+- Thiết kế giao diện hoàn toàn bằng LinearLayout lồng nhau, dùng ListView kết hợp ArrayAdapter cơ bản để đổ dữ liệu chuỗi (String) lên màn hình.
+- Viết hàm capNhatSoLuongSan() sử dụng vòng lặp for để duyệt qua ArrayList, đếm chuỗi trạng thái và cập nhật lại nội dung cho các TextView hiển thị.
+- Bắt sự kiện trực tiếp bằng setOnItemClickListener và xử lý nút bấm thông qua DialogInterface.OnClickListener của AlertDialog.
