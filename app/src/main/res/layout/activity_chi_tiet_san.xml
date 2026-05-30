@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    tools:context=".ChiTietSanActivity">
+
+    <TextView
+        android:id="@+id/tvTenSanChiTiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên Sân Bóng"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginTop="30dp" />
+    <TextView
+        android:id="@+id/tvGiaSanChiTiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá: 000k/h"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/etTenKhach"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nhap ten cua ban"
+        android:inputType="textPersonName"
+        android:layout_marginTop="30dp"
+        android:autofillHints="name" />
+
+    <Button
+        android:id="@+id/btnXacNhanDat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác Nhận Đặt Sân"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2E7D32" />
+</LinearLayout>

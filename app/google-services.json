@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "633601922924",
+    "project_id": "hethongquanlysanbong",
+    "storage_bucket": "hethongquanlysanbong.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633601922924:android:3000aee001ce3dbae74549",
+        "android_client_info": {
+          "package_name": "vn.edu.tinhoc123.hethongquanlysanbong"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgsXvHFA4D7QP9T6coo-8Gd7NdGvZOO3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

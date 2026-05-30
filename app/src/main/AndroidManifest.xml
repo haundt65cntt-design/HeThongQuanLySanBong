@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HeThongQuanLySanBong">
         <activity
+            android:name=".DanhSachSanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietSanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ManHinhChinhActivity"
             android:exported="false" />
         <activity
