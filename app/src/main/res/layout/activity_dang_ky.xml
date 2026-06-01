@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F0F4F1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ĐĂNG KÝ TÀI KHOẢN"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/edtDangKyUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Tên đăng nhập"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edtDangKyPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edtDangKyRePass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nhập lại mật khẩu"
+        android:inputType="textPassword"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnXacNhanDangKy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng Ký Ngay"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tvQuayLaiLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đã có tài khoản? Đăng nhập"
+        android:textColor="#666666"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
+</LinearLayout>

@@ -1,10 +1,10 @@
 package vn.edu.tinhoc123.hethongquanlysanbong;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.ArrayList;
 
 public class DanhSachSanActivity extends AppCompatActivity {
@@ -64,7 +63,15 @@ public class DanhSachSanActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     String sanDuocChon = dsSanBong.get(position);
-                    hienThiMenuHanhDongKhach(sanDuocChon, position);
+
+                    if (sanDuocChon.contains("(Đã đặt)")) {
+                        Toast.makeText(DanhSachSanActivity.this, "Sân này đã có người đặt! Vui lòng chọn sân trống.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    Intent intent = new Intent(DanhSachSanActivity.this, ChiTietDatSanActivity.class);
+                    intent.putExtra("TEN_SAN", sanDuocChon);
+                    startActivity(intent);
                 }
             });
         }
@@ -88,51 +95,5 @@ public class DanhSachSanActivity extends AppCompatActivity {
         if (txtDonHuyNum != null) {
             txtDonHuyNum.setText(String.valueOf(soSanDaDat));
         }
-    }
-
-    private void hienThiMenuHanhDongKhach(String tenSan, int viTriChon) {
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        View dialogView = getLayoutInflater().inflate(R.layout.layout_menu_chuc_nang_san, null);
-        bottomSheetDialog.setContentView(dialogView);
-
-        TextView tvTenSanChon = dialogView.findViewById(R.id.tvTenSanChon);
-        LinearLayout btnDatSan = dialogView.findViewById(R.id.btnDatSan);
-        LinearLayout btnLienHe = dialogView.findViewById(R.id.btnMenuLienHeChuSan);
-        LinearLayout btnHuySan = dialogView.findViewById(R.id.btnHuySan);
-
-        if (tvTenSanChon != null) {
-            tvTenSanChon.setText(tenSan);
-        }
-
-        if (btnDatSan != null) {
-            btnDatSan.setOnClickListener(v -> {
-                String tenSanGoc = tenSan.replaceAll(" \\(.*\\)", "");
-                dsSanBong.set(viTriChon, tenSanGoc + " (Đã đặt)");
-                adapter.notifyDataSetChanged();
-                tinhToanTrangThaiSan();
-                Toast.makeText(this, "Yêu cầu đặt sân và chuyển khoản cọc thành công!", Toast.LENGTH_SHORT).show();
-                bottomSheetDialog.dismiss();
-            });
-        }
-
-        if (btnLienHe != null) {
-            btnLienHe.setOnClickListener(v -> {
-                Toast.makeText(this, "Đang kết nối cuộc gọi tới chủ sân...", Toast.LENGTH_SHORT).show();
-                bottomSheetDialog.dismiss();
-            });
-        }
-
-        if (btnHuySan != null) {
-            btnHuySan.setOnClickListener(v -> {
-                String tenSanGoc = tenSan.replaceAll(" \\(.*\\)", "");
-                dsSanBong.set(viTriChon, tenSanGoc + " (Còn trống)");
-                adapter.notifyDataSetChanged();
-                tinhToanTrangThaiSan();
-                Toast.makeText(this, "Đã hủy lịch đặt sân thành công!", Toast.LENGTH_SHORT).show();
-                bottomSheetDialog.dismiss();
-            });
-        }
-
-        bottomSheetDialog.show();
     }
 }

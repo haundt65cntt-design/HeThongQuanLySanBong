@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F0F4F1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KHÔI PHỤC MẬT KHẨU"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập tên tài khoản để đặt lại mật khẩu mới hệ thống"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/edtQuenUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nhập tên tài khoản"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edtMatKhauMoi"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nhập mật khẩu mới"
+        android:inputType="textPassword"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnDoiMatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Cập Nhật Mật Khẩu"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tvQuayLaiLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại Đăng nhập"
+        android:textColor="#666666"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
+</LinearLayout>

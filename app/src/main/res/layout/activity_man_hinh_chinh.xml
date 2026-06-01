@@ -5,215 +5,217 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F0F4F1"
-    android:padding="16dp"
+    android:background="#F4F6F8"
     tools:context=".ManHinhChinhActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Xin Chào Admin,"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2E7D32"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hệ thống quản lý sân bóng"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
-        </LinearLayout>
+            android:text="Xin Chào Admin 👋"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hệ thống quản lý đặt sân bóng thông minh"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginTop="6dp"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quản Lý Chung"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginBottom="10dp"/>
-
-    <GridLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="2"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
-        android:layout_marginBottom="16dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:id="@+id/btnMenuLichDat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="20dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📅"
-                android:textSize="36sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lịch Đặt Sân"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:textColor="#2E7D32"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btnMenuSanBong"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="20dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⚽"
-                android:textSize="36sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quản Lý Sân"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:textColor="#2E7D32"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btnMenuDoanhThu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="20dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📈"
-                android:textSize="36sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Doanh Thu"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:textColor="#2E7D32"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btnMenuDangXuat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="20dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🚪"
-                android:textSize="36sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Đăng Xuất"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:textColor="#C62828"/>
-        </LinearLayout>
-    </GridLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tin Tức &amp; Khuyến Mãi"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="10dp"/>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
-
-        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="24dp">
 
-            <ImageView
-                android:id="@+id/imgBanner"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Quản Lý Chung"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnMenuLichDat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/banner_san_bong" />
+                android:layout_height="75dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
 
-            <View
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📅"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Lịch Sử Đặt Sân"
+                        android:textColor="#2E7D32"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnMenuSanBong"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#4D000000"/>
+                android:layout_height="75dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
 
-            <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚽"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Quản Lý Sân"
+                        android:textColor="#2E7D32"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Tin Tức &amp; Khuyến Mãi"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/banner_san_bong" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#66000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KHUNG GIỜ VÀNG - GIẢM GIÁ 10%"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Áp dụng cho tất cả các ngày trong tuần từ 14:00 đến 16:00 khi đặt sân trực tuyến."
+                            android:textColor="#E0E0E0"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:orientation="vertical"
-                android:padding="16dp">
+                app:cardBackgroundColor="#E8F5E9"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" KHUNG GIỜ VÀNG - GIẢM GIÁ 10%"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Áp dụng cho tất cả các ngày trong tuần từ 14:00 đến 16:00 khi đặt sân trực tuyến."
-                    android:textColor="#E0E0E0"
-                    android:textSize="12sp"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📞 Thông tin hỗ trợ hệ thống"
+                        android:textColor="#2E7D32"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="• Hotline hỗ trợ kỹ thuật: 078 2722 165 (8:00 - 22:00)"
+                        android:textColor="#444444"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="•Địa chỉ sân: 12 Lang Liêu, Bắc Nha Trang, Khánh Hoà"
+                        android:textColor="#444444"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

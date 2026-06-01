@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F1"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lịch Khách Đặt Sân Hôm Nay"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/lvDanhSachDonDat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"/>
+
+</LinearLayout>
