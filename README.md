@@ -1,23 +1,32 @@
-# Hệ Thống Quản Lý Sân Bóng 
+# Hệ Thống Quản Lý Sân Bóng
 
-Em đã sửa lại giao diện màn hình chính và viết thêm logic code để chuyển hẳn ứng dụng sang luồng chức năng dành cho Khách hàng vào xem và đặt lịch, thay vì làm giao diện cho Admin quản lý như tuần trước.
+Em đã tiến hành cấu trúc lại toàn bộ mã nguồn và tối ưu hóa giao diện màn hình chính từ dạng lưới (Grid) cũ sang dạng danh sách tính năng thông minh bằng CardView, giúp tập trung xử lý phân hệ cốt lõi cho việc Quản trị hệ thống (Admin).
 
 ## Các phần em đã chỉnh sửa và hoàn thành:
-- Dọn dẹp giao diện: Xóa bỏ các nút bấm của Admin như "Thêm sân mới" hay "Góc quản lý nhanh" để màn hình gọn gàng, đúng thực tế với app cho người đi thuê sân.
-- Sắp xếp lại bố cục: Chia lại tỷ lệ 3 ô danh mục (Sân 5, Sân 7, Sân 11) ở đầu trang bằng layout_weight để các ô tự động dàn đều, nhìn cân đối và không bị thừa khoảng trắng.
-- Bổ sung dữ liệu: Tự nhập thủ công danh sách 10 sân bóng vào ArrayList với đầy đủ tên sân và trạng thái khác nhau (Còn trống / Đã đặt) để hiển thị lên ListView.
-- Thêm thanh trạng thái: Thiết kế thêm 2 ô nhỏ ở dưới cùng màn hình để hiển thị tổng số sân đang trống và số sân đã được đặt trong ngày.
-- Viết sự kiện Click: Thiết lập khi người dùng bấm vào một sân bất kỳ trong danh sách, ứng dụng sẽ hiện lên một cái AlertDialog (hộp thoại lựa chọn) cơ bản gồm các nút: Đặt Sân & Cọc, Hủy Sân hoặc Liên Hệ Hotline.
-- Xử lý thay đổi dữ liệu: Khi khách bấm Đặt hoặc Hủy trên hộp thoại, chữ trạng thái trên dòng đó sẽ tự thay đổi và 2 ô đếm số lượng sân trống phía dưới cũng tự động nhảy lại số chính xác.
+- **Dọn dẹp và tối ưu giao diện:** Loại bỏ hoàn toàn các nút chức năng chưa ổn định (như "Doanh thu") và nút Đăng xuất làm rối luồng. Chuyển đổi các ô chức năng nhỏ sang cấu trúc thanh Banner chữ nhật dài bằng `CardView` có thuộc tính `elevation` tạo đổ bóng, giúp giao diện hiện đại và trực quan hơn.
+- **Xử lý khoảng trống màn hình:** Bọc toàn bộ các khối chức năng vào một `ScrollView` để đảm bảo giao diện không bị lỗi tràn (Overflown) khi chạy trên các thiết bị màn hình nhỏ. Đồng thời thiết kế thêm một khung Footer chứa thông tin hỗ trợ kỹ thuật và Hotline ở dưới cùng để lấp đầy khoảng trống.
+- **Đồng bộ hóa luồng đặt sân & lưu trạng thái:** Xây dựng logic đếm số lượng sân động phía cuối danh sách thông qua vòng lặp kiểm tra trạng thái ("Còn trống" / "Đã đặt"). Thiết kế màn hình Xác nhận đặt cọc tích hợp mã QR chuyển khoản tự động kèm biểu mẫu điền thông tin khách hàng, luân chuyển trạng thái sang danh sách chờ xác nhận một cách khép kín.
+- **Khắc phục lỗi Duplicate class hệ thống:** Phát hiện và bóc tách thành công Class `QuenMatKhauActivity` bị khai báo lồng sai vị trí trong tệp `DangKyActivity.java` trước đó, cấu trúc lại định tuyến file trong `AndroidManifest.xml` giúp hệ thống Build Gradle thành công không còn lỗi đỏ.
 
 ## Hình ảnh chạy thực tế trên máy ảo:
 <p align="center">
-  <img width="373" height="786" alt="Màn hình đăng nhập" src="https://github.com/user-attachments/assets/0a0f7553-fc62-489e-9d92-0de76f0d70cd" />
-  <img width="381" height="782" alt="Màn hình danh sách đặt sân online" src="https://github.com/user-attachments/assets/980ec0ac-85bb-4ace-8dad-a9b578de3f02" />
-  <img width="387" height="795" alt="Hộp thoại chọn chức năng sân" src="https://github.com/user-attachments/assets/fde9c7da-3c45-4c41-b742-26b09996c3ee" />
+  <img width="310" height="640" alt="Màn hình đăng nhập" src=<img width="384" height="786" alt="Screenshot 2026-06-01 120934" src="https://github.com/user-attachments/assets/ba414ca2-f4d2-4879-b9f9-0d75535313b0" />
+ />
+  <img width="310" height="640" alt="Màn hình chính admin" src=<img width="408" height="791" alt="Screenshot 2026-06-01 121012" src="https://github.com/user-attachments/assets/4d414bae-23a0-423d-8f90-63c96f544d23" />
+ />
+  <img width="310" height="640" alt="Danh sách trạng thái sân" src=<img width="362" height="779" alt="Screenshot 2026-06-01 121023" src="https://github.com/user-attachments/assets/b784709e-31e5-408a-8366-906d977702bd" />
+ />
+</p>
+
+<p align="center">
+  <img width="310" height="640" alt="Quét mã QR đặt cọc" src=<img width="379" height="787" alt="Screenshot 2026-06-01 121150" src="https://github.com/user-attachments/assets/dacd0e1a-3da1-425c-a0fe-630d736ef12e" />
+ />
+  <img width="310" height="640" alt="Lịch khách đặt chờ duyệt" src=<img width="370" height="779" alt="Screenshot 2026-06-01 121235" src="https://github.com/user-attachments/assets/856805bc-1c80-4ee7-8e09-1d8f82770bf0" />
+ />
 </p>
 
 ## Cấu trúc mã nguồn thực hiện:
-- Thiết kế giao diện hoàn toàn bằng LinearLayout lồng nhau, dùng ListView kết hợp ArrayAdapter cơ bản để đổ dữ liệu chuỗi (String) lên màn hình.
-- Viết hàm capNhatSoLuongSan() sử dụng vòng lặp for để duyệt qua ArrayList, đếm chuỗi trạng thái và cập nhật lại nội dung cho các TextView hiển thị.
-- Bắt sự kiện trực tiếp bằng setOnItemClickListener và xử lý nút bấm thông qua DialogInterface.OnClickListener của AlertDialog.
+- Thiết kế giao diện hoàn toàn bằng `LinearLayout` lồng nhau, phối hợp linh hoạt cùng `CardView` (bo góc `14dp`) và `RelativeLayout` sử dụng bộ lọc màu đen mờ để làm nổi bật chữ trên hình nền sân bóng.
+- Khởi tạo mảng `ArrayList<SanBong>` động để lưu trữ dữ liệu trạng thái thay vì fix cứng văn bản.
+- Tận dụng hàm duyệt vòng lặp `for` lồng cấu trúc điều kiện `if-else` để đếm chính xác số lượng Sân đang trống / Sân đã đặt, tự động cập nhật lên màn hình mỗi khi tương tác dữ liệu.
+- Đảm bảo an toàn hệ thống, ngăn ngừa tuyệt đối lỗi văng ứng dụng (`NullPointerException`) bằng cách bọc tất cả các sự kiện `setOnClickListener` trong các khối lệnh kiểm tra điều kiện an toàn (`if (view != null)`).
