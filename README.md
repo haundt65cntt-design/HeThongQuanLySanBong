@@ -10,15 +10,15 @@ Em đã tiến hành cấu trúc lại toàn bộ mã nguồn và tối ưu hóa
 
 ## Hình ảnh chạy thực tế trên máy ảo:
 <p align="center">
-  <img width="230" alt="Màn hình đăng nhập" src="https://github.com/user-attachments/assets/ba414ca2-f4d2-4879-b9f9-0d75535313b0" />
-  <img width="230" alt="Màn hình chính admin" src="https://github.com/user-attachments/assets/4d414bae-23a0-423d-8f90-63c96f544d23" />
-  <img width="230" alt="Danh sách trạng thái sân" src="https://github.com/user-attachments/assets/b784709e-31e5-408a-8366-906d977702bd" />
+  <img width="240" alt="Màn hình đăng nhập" src="https://github.com/user-attachments/assets/ba414ca2-f4d2-4879-b9f9-0d75535313b0" />
+  <img width="240" alt="Màn hình chính admin" src="https://github.com/user-attachments/assets/4d414bae-23a0-423d-8f90-63c96f544d23" />
+  <img width="240" alt="Danh sách trạng thái sân" src="https://github.com/user-attachments/assets/b784709e-31e5-408a-8366-906d977702bd" />
 </p>
 
 <p align="center">
-  <img width="230" alt="Quét mã QR đặt cọc" src="https://github.com/user-attachments/assets/dacd0e1a-3da1-425c-a0fe-630d736ef12e" />
-  <img width="230" alt="Lịch khách đặt chờ duyệt" src="https://github.com/user-attachments/assets/856805bc-1c80-4ee7-8e09-1d8f82770bf0" />
-  <img width="230" alt="Chi tiết hóa đơn đặt cọc" src="https://github.com/user-attachments/assets/9525c57b-eb1f-494b-a25e-e0df40003df2" />
+  <img width="240" alt="Quét mã QR đặt cọc" src="https://github.com/user-attachments/assets/dacd0e1a-3da1-425c-a0fe-630d736ef12e" />
+  <img width="240" alt="Lịch khách đặt chờ duyệt" src="https://github.com/user-attachments/assets/856805bc-1c80-4ee7-8e09-1d8f82770bf0" />
+  <img width="240" alt="Chi tiết hóa đơn đặt cọc" src="https://github.com/user-attachments/assets/bb8ebf35-c9d1-4475-a946-31aaa9dcdee2" />
 </p>
 
 ## Cấu trúc mã nguồn thực hiện:
