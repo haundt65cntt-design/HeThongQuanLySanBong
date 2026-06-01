@@ -10,19 +10,14 @@ Em đã tiến hành cấu trúc lại toàn bộ mã nguồn và tối ưu hóa
 
 ## Hình ảnh chạy thực tế trên máy ảo:
 <p align="center">
-  <img width="310" height="640" alt="Màn hình đăng nhập" src=<img width="384" height="786" alt="Screenshot 2026-06-01 120934" src="https://github.com/user-attachments/assets/ba414ca2-f4d2-4879-b9f9-0d75535313b0" />
- />
-  <img width="310" height="640" alt="Màn hình chính admin" src=<img width="408" height="791" alt="Screenshot 2026-06-01 121012" src="https://github.com/user-attachments/assets/4d414bae-23a0-423d-8f90-63c96f544d23" />
- />
-  <img width="310" height="640" alt="Danh sách trạng thái sân" src=<img width="362" height="779" alt="Screenshot 2026-06-01 121023" src="https://github.com/user-attachments/assets/b784709e-31e5-408a-8366-906d977702bd" />
- />
+  <img width="240" alt="Màn hình đăng nhập" src="https://github.com/user-attachments/assets/ba414ca2-f4d2-4879-b9f9-0d75535313b0" />
+  <img width="240" alt="Màn hình chính admin" src="https://github.com/user-attachments/assets/4d414bae-23a0-423d-8f90-63c96f544d23" />
+  <img width="240" alt="Danh sách trạng thái sân" src="https://github.com/user-attachments/assets/b784709e-31e5-408a-8366-906d977702bd" />
 </p>
 
 <p align="center">
-  <img width="310" height="640" alt="Quét mã QR đặt cọc" src=<img width="379" height="787" alt="Screenshot 2026-06-01 121150" src="https://github.com/user-attachments/assets/dacd0e1a-3da1-425c-a0fe-630d736ef12e" />
- />
-  <img width="310" height="640" alt="Lịch khách đặt chờ duyệt" src=<img width="370" height="779" alt="Screenshot 2026-06-01 121235" src="https://github.com/user-attachments/assets/856805bc-1c80-4ee7-8e09-1d8f82770bf0" />
- />
+  <img width="240" alt="Quét mã QR đặt cọc" src="https://github.com/user-attachments/assets/dacd0e1a-3da1-425c-a0fe-630d736ef12e" />
+  <img width="240" alt="Lịch khách đặt chờ duyệt" src="https://github.com/user-attachments/assets/856805bc-1c80-4ee7-8e09-1d8f82770bf0" />
 </p>
 
 ## Cấu trúc mã nguồn thực hiện:
